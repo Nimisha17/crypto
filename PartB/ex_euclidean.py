@@ -1,21 +1,22 @@
-# Extended Euclidean
+# Extended Euclidean method
 a = [56211,43159,53947,19385]
+
 for i in range(2):
     s=0
-    olds=1
+    old_s=1
     t=1
-    oldt=0
+    old_t=0
     r=a[i+2]
-    oldr=a[i]
+    old_r=a[i]
     while(r!=0):
-        q=oldr//r
+        q=old_r//r
         t1=r
-        r=oldr-(q*r)
-        oldr=t1
+        r=old_r-(q*r)
+        old_r=t1
         t1=s
-        s=olds-(q*s)
-        olds=t1
+        s=old_s-(q*s)
+        old_s=t1
         t1=t
-        t=oldt-(q*t)
-        oldt=t1
-    print(oldt)
+        t=old_t-(q*t)
+        old_t=t1
+    print(old_t)
